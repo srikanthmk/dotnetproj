@@ -5,7 +5,7 @@
 }
 
 <!DOCTYPE html>
-<html ng-app="myModule">
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Futuresmine</title>
@@ -27,11 +27,10 @@
     <link href="~/css/colors/colors.css" rel="stylesheet" />
     <link href="~/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <script type="text/javascript"
-            src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
 </head>
-<body>
+<body data-ng-app="myModule">
 
     <div class="page-loading">
         <img src="images/loader.gif" alt="" />
@@ -309,7 +308,7 @@
                         <div class="col-lg-12">
                             <div class="account-popup-area signin-popup-box static">
                                 <div class="account-popup">
-                                    <form ng-app="myApp" name="Form" ng-controller="Employee" ng-cloak>
+                                    <form name="Form" ng-cloak>
                                         @*<span>Employee Login</span>*@
                                         <div class="cfield">
                                             <input type="text" name="email" ng-model="formData.email" placeholder="login" required="" />
@@ -323,7 +322,7 @@
                                             <div ng-messages="Form.password.$error" role="alert" multiple="">
                                                 <div ng-message="required" class="my-message">Please enter your password.</div>
                                                 <div ng-message="md-maxlength" class="my-message">Too long.</div>
-                                          </div>
+                                            </div>
                                             <i class="la la-key"></i>
                                         </div>
                                         <p class="remember-label">
@@ -333,15 +332,15 @@
 
                                         <button type="submit" ng-disabled="!Form.$valid" ng-click="checkLoginDetails(formData)">Login</button>
                                         <a href="#" title="">Forgot Password?</a>
-                                        </form>
-                                        <div class="extra-login">
-                                            <span>Or</span>
-                                            <div class="login-social">
-                                                <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
-                                                <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
-                                            </div>
+                                    </form>
+                                    <div class="extra-login">
+                                        <span>Or</span>
+                                        <div class="login-social">
+                                            <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
+                                            <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
                                         </div>
-</div>
+                                    </div>
+                                </div>
                             </div><!-- LOGIN POPUP -->
                         </div>
                     </div>
@@ -434,14 +433,14 @@
 
     <!-- SIGNUP POPUP -->
     <!--Employee Registartion-->
-    <div class="account-popup-area signup-popup-box">
+    <div class="account-popup-area signup-popup-box" data-ng-controller="RegistrationCont">
         <div class="account-popup">
             <span class="close-popup"><i class="la la-close"></i></span>
             <h3>Sign Up</h3>
             <div class="select-user">
                 <span>Employee</span>
             </div>
-            <form name="Form1" data-ng-submit="sendForm()" data-ng-controller="RegistrationCont" novalidate>
+            <form name="Form1" novalidate>
 
 
                 <div class="cfield">
@@ -464,29 +463,25 @@
                     <i class="la la-phone"></i>
                 </div>
 
-                <div class="dropdown-field">
-                    <select data-placeholder="Please Select Specialism" class="chosen"  ng-model="reg.classification">
-                        <option>Web Development</option>
-                        <option>Web Designing</option>
-                        <option>Art & Culture</option>
-                        <option>Reading & Writing</option>
+                <!--div class="dropdown-field">
+  <select data-placeholder="Please Select Specialism" class="chosen" ng-model="reg.classification">
+                        <option ng-repeat="x in classification" value="{{x}}">{{x}}</option>
                     </select>
-                </div>
+
+                </!--div>
                 <div class="dropdown-field">
-                    <select data-placeholder="Please Select Country" class="chosen" ng-model="reg.country">
-                        <option>India</option>
-                        <option>New Zealand</option>
-                        <option>Uniated States</option>
-                        <option>Australia</option>
+                   <select data-placeholder="Please Select Country" class="chosen" ng-model="reg.country">
+                        <option ng-repeat="y in countrys" value="{{y}}">{{y}}</option>
                     </select>
-                </div>
-              
+
+                </div-->
+
 
 
                 <button type="submit" ng-click="saveCustomer(reg);" ng-disabled="!Form1.$valid">Login</button>
             </form>
 
-          
+
             <div class="extra-login">
                 <span>Or</span>
                 <div class="login-social">
@@ -498,10 +493,9 @@
     </div>
 
 
-    <script src="~/scripts/angular.js"></script>
+    <!--script src="~/scripts/angular.js"></!--script>-->
     <script src="~/scripts/Module/mainModule.js"></script>
-    <script src="~/scripts/Registration/Registration.js"></script>
-    <script src="~/scripts/Login/Login.js"></script>
+
 
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/modernizr.js"></script>
@@ -514,7 +508,8 @@
     <script src="~/js/jquery.scrollbar.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&sensor=true&libraries=places"></script>
     <script src="~/js/maps2.js"></script>
-
+    <script src="~/scripts/Registration/Registration.js"></script>
+    <script src="~/scripts/Login/Login.js"></script>
 </body>
 </html>
 
