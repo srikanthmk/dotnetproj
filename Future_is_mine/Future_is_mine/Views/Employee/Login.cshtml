@@ -1,0 +1,520 @@
+﻿
+@{
+    Layout = null;
+   
+}
+
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Futuresmine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ramnath">
+
+
+
+    <!-- Styles -->
+
+    <link href="~/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/css/icons.css" rel="stylesheet" />
+    <link href="~/css/animate.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+    <link href="~/css/chosen.css" rel="stylesheet" />
+    <link href="~/css/colors/colors.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script type="text/javascript"
+            src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+</head>
+<body>
+
+    <div class="page-loading">
+        <img src="images/loader.gif" alt="" />
+        <span>Skip Loader</span>
+    </div>
+
+    <div class="theme-layout" id="scrollup">
+
+        <div class="responsive-header">
+            <div class="responsive-menubar">
+                <div class="res-logo"><a href="index.html" title=""><img src="http://placehold.it/178x40" alt="FUTURESMINE" /></a></div>
+                <div class="menu-resaction">
+                    <div class="res-openmenu">
+                        <img src="images/icon.png" alt="" /> Menu
+                    </div>
+                    <div class="res-closemenu">
+                        <img src="images/icon2.png" alt="" /> Close
+                    </div>
+                </div>
+            </div>
+            <div class="responsive-opensec">
+                <div class="btn-extars">
+                    <a href="#" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>
+                    <ul class="account-btns">
+                        <li class="signup-popup"><a title=""><i class="la la-key"></i> Sign Up</a></li>
+                        <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Login</a></li>
+                    </ul>
+                </div><!-- Btn Extras -->
+                <form class="res-search">
+                    <input type="text" placeholder="Job title, keywords or company name" />
+                    <button type="submit"><i class="la la-search"></i></button>
+                </form>
+                <div class="responsivemenu">
+                    <ul>
+                        <li class="menu-item-has-children">
+                            <a href="#" title="">Home</a>
+                            <ul>
+                                <li><a href="index.html" title="">Home Layout 1</a></li>
+                                <li><a href="index2.html" title="">Home Layout 2</a></li>
+                                <li><a href="index3.html" title="">Home Layout 3</a></li>
+                                <li><a href="index4.html" title="">Home Layout 4</a></li>
+                                <li><a href="index5.html" title="">Home Layout 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" title="">Employers</a>
+                            <ul>
+                                <li><a href="employer_list1.html" title=""> Employer List 1</a></li>
+                                <li><a href="employer_list2.html" title="">Employer List 2</a></li>
+                                <li><a href="employer_list3.html" title="">Employer List 3</a></li>
+                                <li><a href="employer_list4.html" title="">Employer List 4</a></li>
+                                <li><a href="employer_single1.html" title="">Employer Single 1</a></li>
+                                <li><a href="employer_single2.html" title="">Employer Single 2</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="#" title="">Employer Dashboard</a>
+                                    <ul>
+                                        <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>
+                                        <li><a href="employer_packages.html" title="">Employer Packages</a></li>
+                                        <li><a href="employer_post_new.html" title="">Employer Post New</a></li>
+                                        <li><a href="employer_profile.html" title="">Employer Profile</a></li>
+                                        <li><a href="employer_resume.html" title="">Employer Resume</a></li>
+                                        <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>
+                                        <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>
+                                        <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" title="">Candidates</a>
+                            <ul>
+                                <li><a href="candidates_list.html" title="">Candidates List 1</a></li>
+                                <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>
+                                <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>
+                                <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>
+                                <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="#" title="">Candidates Dashboard</a>
+                                    <ul>
+                                        <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>
+                                        <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>
+                                        <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>
+                                        <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>
+                                        <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>
+                                        <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>
+                                        <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>
+                                        <li><a href="candidates_change_password.html" title="">Change Password</a></li>
+                                        <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" title="">Blog</a>
+                            <ul>
+                                <li><a href="blog_list.html"> Blog List 1</a></li>
+                                <li><a href="blog_list2.html">Blog List 2</a></li>
+                                <li><a href="blog_list3.html">Blog List 3</a></li>
+                                <li><a href="blog_single.html">Blog Single</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" title="">Job</a>
+                            <ul>
+                                <li><a href="job_list_classic.html">Job List Classic</a></li>
+                                <li><a href="job_list_grid.html">Job List Grid</a></li>
+                                <li><a href="job_list_modern.html">Job List Modern</a></li>
+                                <li><a href="job_single1.html">Job Single 1</a></li>
+                                <li><a href="job_single2.html">Job Single 2</a></li>
+                                <li><a href="job-single3.html">Job Single 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#" title="">Pages</a>
+                            <ul>
+                                <li><a href="about.html" title="">About Us</a></li>
+                                <li><a href="404.html" title="">404 Error</a></li>
+                                <li><a href="contact.html" title="">Contact Us 1</a></li>
+                                <li><a href="contact2.html" title="">Contact Us 2</a></li>
+                                <li><a href="faq.html" title="">FAQ's</a></li>
+                                <li><a href="how_it_works.html" title="">How it works</a></li>
+                                <li><a href="login.html" title="">Login</a></li>
+                                <li><a href="pricing.html" title="">Pricing Plans</a></li>
+                                <li><a href="register.html" title="">Register</a></li>
+                                <li><a href="terms_and_condition.html" title="">Terms & Condition</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <header class="gradient">
+            <div class="menu-sec">
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.html" title=""><img src="http://placehold.it/178x40" alt="" /></a>
+                    </div><!-- Logo -->
+                    <div class="btn-extars">
+                        <a href="#" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>
+                        <ul class="account-btns">
+                            <li class="signup-popup"><a title=""><i class="la la-key"></i> Sign Up</a></li>
+                            <li class="signin-popup"><a title=""><i class="la la-external-link-square"></i> Login</a></li>
+                        </ul>
+                    </div><!-- Btn Extras -->
+                    <nav>
+                        <ul>
+                            <li class="menu-item-has-children">
+                                <a href="#" title="">Home</a>
+                                <ul>
+                                    <li><a href="index.html" title="">Home Layout 1</a></li>
+                                    <li><a href="index2.html" title="">Home Layout 2</a></li>
+                                    <li><a href="index3.html" title="">Home Layout 3</a></li>
+                                    <li><a href="index4.html" title="">Home Layout 4</a></li>
+                                    <li><a href="index5.html" title="">Home Layout 5</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#" title="">Employers</a>
+                                <ul>
+                                    <li><a href="employer_list1.html" title=""> Employer List 1</a></li>
+                                    <li><a href="employer_list2.html" title="">Employer List 2</a></li>
+                                    <li><a href="employer_list3.html" title="">Employer List 3</a></li>
+                                    <li><a href="employer_list4.html" title="">Employer List 4</a></li>
+                                    <li><a href="employer_single1.html" title="">Employer Single 1</a></li>
+                                    <li><a href="employer_single2.html" title="">Employer Single 2</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#" title="">Employer Dashboard</a>
+                                        <ul>
+                                            <li><a href="employer_manage_jobs.html" title="">Employer Job Manager</a></li>
+                                            <li><a href="employer_packages.html" title="">Employer Packages</a></li>
+                                            <li><a href="employer_post_new.html" title="">Employer Post New</a></li>
+                                            <li><a href="employer_profile.html" title="">Employer Profile</a></li>
+                                            <li><a href="employer_resume.html" title="">Employer Resume</a></li>
+                                            <li><a href="employer_transactions.html" title="">Employer Transaction</a></li>
+                                            <li><a href="employer_job_alert.html" title="">Employer Job Alert</a></li>
+                                            <li><a href="employer_change_password.html" title="">Employer Change Password</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#" title="">Candidates</a>
+                                <ul>
+                                    <li><a href="candidates_list.html" title="">Candidates List 1</a></li>
+                                    <li><a href="candidates_list2.html" title="">Candidates List 2</a></li>
+                                    <li><a href="candidates_list3.html" title="">Candidates List 3</a></li>
+                                    <li><a href="candidates_single.html" title="">Candidates Single 1</a></li>
+                                    <li><a href="candidates_single2.html" title="">Candidates Single 2</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#" title="">Candidates Dashboard</a>
+                                        <ul>
+                                            <li><a href="candidates_my_resume.html" title="">Candidates Resume</a></li>
+                                            <li><a href="candidates_my_resume_add_new.html" title="">Candidates Resume new</a></li>
+                                            <li><a href="candidates_profile.html" title="">Candidates Profile</a></li>
+                                            <li><a href="candidates_shortlist.html" title="">Candidates Shortlist</a></li>
+                                            <li><a href="candidates_job_alert.html" title="">Candidates Job Alert</a></li>
+                                            <li><a href="candidates_dashboard.html" title="">Candidates Dashboard</a></li>
+                                            <li><a href="candidates_cv_cover_letter.html" title="">CV Cover Letter</a></li>
+                                            <li><a href="candidates_change_password.html" title="">Change Password</a></li>
+                                            <li><a href="candidates_applied_jobs.html" title="">Candidates Applied Jobs</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#" title="">Blog</a>
+                                <ul>
+                                    <li><a href="blog_list.html"> Blog List 1</a></li>
+                                    <li><a href="blog_list2.html">Blog List 2</a></li>
+                                    <li><a href="blog_list3.html">Blog List 3</a></li>
+                                    <li><a href="blog_single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#" title="">Job</a>
+                                <ul>
+                                    <li><a href="job_list_classic.html">Job List Classic</a></li>
+                                    <li><a href="job_list_grid.html">Job List Grid</a></li>
+                                    <li><a href="job_list_modern.html">Job List Modern</a></li>
+                                    <li><a href="job_single1.html">Job Single 1</a></li>
+                                    <li><a href="job_single2.html">Job Single 2</a></li>
+                                    <li><a href="job-single3.html">Job Single 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#" title="">Pages</a>
+                                <ul>
+                                    <li><a href="about.html" title="">About Us</a></li>
+                                    <li><a href="404.html" title="">404 Error</a></li>
+                                    <li><a href="contact.html" title="">Contact Us 1</a></li>
+                                    <li><a href="contact2.html" title="">Contact Us 2</a></li>
+                                    <li><a href="faq.html" title="">FAQ's</a></li>
+                                    <li><a href="how_it_works.html" title="">How it works</a></li>
+                                    <li><a href="login.html" title="">Login</a></li>
+                                    <li><a href="pricing.html" title="">Pricing Plans</a></li>
+                                    <li><a href="register.html" title="">Register</a></li>
+                                    <li><a href="terms_and_condition.html" title="">Terms & Condition</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav><!-- Menus -->
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="block no-padding  gray">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="inner2">
+                                <div class="inner-title2">
+                                    <h3>Employee Login</h3>
+                                    <span>Keep up to date with the latest news</span>
+                                </div>
+                                <div class="page-breacrumbs">
+                                    <ul class="breadcrumbs">
+                                        <li><a href="#" title="">Home</a></li>
+                                        <li><a href="#" title="">Pages</a></li>
+                                        <li><a href="#" title="">Login</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="block remove-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="account-popup-area signin-popup-box static">
+                                <div class="account-popup">
+                                    <form ng-app="myApp" name="Form" ng-controller="Employee" ng-cloak>
+                                        @*<span>Employee Login</span>*@
+                                        <div class="cfield">
+                                            <input type="text" name="email" ng-model="formData.email" placeholder="login" required="" />
+                                            <div ng-messages="Form.email.$error" role="alert" multiple="">
+                                                <div ng-message="required" class="my-message">Please enter your email.</div>
+                                            </div>
+                                            <i class="la la-user"></i>
+                                        </div>
+                                        <div class="cfield">
+                                            <input type="password" name="password" ng-model="formData.password" placeholder="password" required="" md-maxlength="16" />
+                                            <div ng-messages="Form.password.$error" role="alert" multiple="">
+                                                <div ng-message="required" class="my-message">Please enter your password.</div>
+                                                <div ng-message="md-maxlength" class="my-message">Too long.</div>
+                                          </div>
+                                            <i class="la la-key"></i>
+                                        </div>
+                                        <p class="remember-label">
+                                            <input type="checkbox" name="cb" id="cb1"><label for="cb1">Remember me</label>
+                                        </p>
+
+
+                                        <button type="submit" ng-disabled="!Form.$valid" ng-click="checkLoginDetails(formData)">Login</button>
+                                        <a href="#" title="">Forgot Password?</a>
+                                        </form>
+                                        <div class="extra-login">
+                                            <span>Or</span>
+                                            <div class="login-social">
+                                                <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
+                                                <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
+                                            </div>
+                                        </div>
+</div>
+                            </div><!-- LOGIN POPUP -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 column">
+                            <div class="widget">
+                                <div class="about_widget">
+                                    <div class="logo">
+                                        <a href="#" title=""><img src="http://placehold.it/178x40" alt="" /></a>
+                                    </div>
+                                    <span>Collin Street West, Victor 8007, Australia.</span>
+                                    <span>+1 246-345-0695</span>
+                                    <span>info@jobhunt.com</span>
+                                    <div class="social">
+                                        <a href="#" title=""><i class="fa fa-facebook"></i></a>
+                                        <a href="#" title=""><i class="fa fa-twitter"></i></a>
+                                        <a href="#" title=""><i class="fa fa-linkedin"></i></a>
+                                        <a href="#" title=""><i class="fa fa-pinterest"></i></a>
+                                        <a href="#" title=""><i class="fa fa-behance"></i></a>
+                                    </div>
+                                </div><!-- About Widget -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4 column">
+                            <div class="widget">
+                                <h3 class="footer-title">Frequently Asked Questions</h3>
+                                <div class="link_widgets">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <a href="#" title="">Privacy & Seurty </a>
+                                            <a href="#" title="">Terms of Serice</a>
+                                            <a href="#" title="">Communications </a>
+                                            <a href="#" title="">Referral Terms </a>
+                                            <a href="#" title="">Lending Licnses </a>
+                                            <a href="#" title="">Disclaimers </a>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <a href="#" title="">Support </a>
+                                            <a href="#" title="">How It Works </a>
+                                            <a href="#" title="">For Employers </a>
+                                            <a href="#" title="">Underwriting </a>
+                                            <a href="#" title="">Contact Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 column">
+                            <div class="widget">
+                                <h3 class="footer-title">Find Jobs</h3>
+                                <div class="link_widgets">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <a href="#" title="">US Jobs</a>
+                                            <a href="#" title="">Canada Jobs</a>
+                                            <a href="#" title="">UK Jobs</a>
+                                            <a href="#" title="">Emplois en Fnce</a>
+                                            <a href="#" title="">Jobs in Deuts</a>
+                                            <a href="#" title="">Vacatures China</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 column">
+                            <div class="widget">
+                                <div class="download_widget">
+                                    <a href="#" title=""><img src="http://placehold.it/230x65" alt="" /></a>
+                                    <a href="#" title=""><img src="http://placehold.it/230x65" alt="" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-line">
+                <span>© 2018 Jobhunt All rights reserved. Design by Creative Layers</span>
+                <a href="#scrollup" class="scrollup" title=""><i class="la la-arrow-up"></i></a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SIGNUP POPUP -->
+    <!--Employee Registartion-->
+    <div class="account-popup-area signup-popup-box">
+        <div class="account-popup">
+            <span class="close-popup"><i class="la la-close"></i></span>
+            <h3>Sign Up</h3>
+            <div class="select-user">
+                <span>Employee</span>
+            </div>
+            <form name="Form1" data-ng-submit="sendForm()" data-ng-controller="RegistrationCont" novalidate>
+
+
+                <div class="cfield">
+                    <input name="Email" type="email" placeholder="Email" ng-model="reg.Email"
+                           ng-Checkemail required />
+                    <i class="la la-envelope-o"></i>
+                </div>
+
+                <div class="cfield">
+                    <input type="password" placeholder="********" ng-model="reg.password" />
+                    <i class="la la-key"></i>
+                </div>
+
+                <div class="cfield">
+                    <input type="text" placeholder="First Name" ng-model="reg.FirstName" />
+                    <i class="la la-user"></i>
+                </div>
+                <div class="cfield">
+                    <input type="text" placeholder="Last Name" ng-model="reg.LastName" />
+                    <i class="la la-phone"></i>
+                </div>
+
+                <div class="dropdown-field">
+                    <select data-placeholder="Please Select Specialism" class="chosen"  ng-model="reg.classification">
+                        <option>Web Development</option>
+                        <option>Web Designing</option>
+                        <option>Art & Culture</option>
+                        <option>Reading & Writing</option>
+                    </select>
+                </div>
+                <div class="dropdown-field">
+                    <select data-placeholder="Please Select Country" class="chosen" ng-model="reg.country">
+                        <option>India</option>
+                        <option>New Zealand</option>
+                        <option>Uniated States</option>
+                        <option>Australia</option>
+                    </select>
+                </div>
+              
+
+
+                <button type="submit" ng-click="saveCustomer(reg);" ng-disabled="!Form1.$valid">Login</button>
+            </form>
+
+          
+            <div class="extra-login">
+                <span>Or</span>
+                <div class="login-social">
+                    <a class="fb-login" href="#" title=""><i class="fa fa-facebook"></i></a>
+                    <a class="tw-login" href="#" title=""><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/scripts/angular.js"></script>
+    <script src="~/scripts/Module/mainModule.js"></script>
+    <script src="~/scripts/Registration/Registration.js"></script>
+    <script src="~/scripts/Login/Login.js"></script>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/modernizr.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/wow.min.js"></script>
+    <script src="~/js/slick.min.js"></script>
+    <script src="~/js/parallax.js"></script>
+    <script src="~/js/select-chosen.js"></script>
+    <script src="~/js/jquery.scrollbar.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&sensor=true&libraries=places"></script>
+    <script src="~/js/maps2.js"></script>
+
+</body>
+</html>
+
