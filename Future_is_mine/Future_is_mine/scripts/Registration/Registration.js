@@ -1,54 +1,22 @@
-﻿
-var app = angular.module("myApp", ['ngMaterial', 'ngMessages']);
-app.config(['$qProvider', function ($qProvider) {
-    $qProvider.errorOnUnhandledRejections(false);
-}]);
+﻿var app = angular.module("myModule", ['ngRoute']);
+ 
 
 
-
-app.directive('usernameAvailable', function ($timeout, $q, $http) {
-    return {
-        restrict: 'AE',
-        require: 'ngModel',
-        link: function (scope, elm, attr, model) {
-            model.$asyncValidators.usernameExists = function () {
-                console.log(model.$viewValue);
-
-                return $http({
-                    method: 'POST',
-                    url: '/Registration/CheckEmail',
-                    data: { "EmployeeEmail": model.$viewValue }
-                    }).then(function mySuccess(res, status, headers, config) {
-                        $timeout(function () {
-                            
-                      //  model.$setValidity('usernameExists', !!res.data);
-                            model.$setValidity('usernameExists', res.data);
-                    }, 1000);
-                    console.log(res.data);
-                });
-                
-
-
-            };
-        }
-    }
-});
 app.controller("RegistrationCont", function ($scope, $rootScope, $http) {
     console.log("in controller");
 
     $rootScope.regdata = [];
 
-
-   
+    $scope.countrys = ["India","New Zealand","Denmark"];
+    $scope.classification = ["Web Developement","Web Designing","full stack","mean stack"];
+    
     $scope.saveCustomer = function (reg) {
-        alert("hi")
-            $rootScope.regdata = reg;
-            console.log($rootScope.regdata);
-            $scope.isViewLoading = true;
-
-        $http({
+        $rootScope.regdata = reg;
+        console.log($rootScope.regdata);
+        $scope.isViewLoading = true;
+       $http({
             method: 'POST',
-            url: '/Registration/InsertEmployee',
+            url: '/Employee/InsertEmployee',
             data: $rootScope.regdata
         }).then(function mySuccess(data, status, headers, config) {
             if (data.success === true) {
@@ -68,12 +36,40 @@ app.controller("RegistrationCont", function ($scope, $rootScope, $http) {
         });
         $scope.isViewLoading = false;
     };
-   
 
-  
 
-})
 
+
+});
+
+
+app.directive('usernameAvailable', function ($timeout, $q, $http) {
+    return {
+        restrict: 'AE',
+        require: 'ngModel',
+        link: function (scope, elm, attr, model) {
+            model.$asyncValidators.usernameExists = function () {
+                console.log(model.$viewValue);
+
+                return $http({
+                    method: 'POST',
+                    url: '/Registration/CheckEmail',
+                    data: { "EmployeeEmail": model.$viewValue }
+                }).then(function mySuccess(res, status, headers, config) {
+                    $timeout(function () {
+
+                        //  model.$setValidity('usernameExists', !!res.data);
+                        model.$setValidity('usernameExists', res.data);
+                    }, 1000);
+                    console.log(res.data);
+                });
+
+
+
+            };
+        }
+    }
+});
 app.directive('ngCheckemail', ['$http', function (async) {
     var message;
     return {
@@ -81,15 +77,14 @@ app.directive('ngCheckemail', ['$http', function (async) {
         link: function (scope, elem, attrs, ctrl) {
 
             elem.on('change', function (evt) {
-                
-                
-                scope.$apply(function ()
-                {
+
+
+                scope.$apply(function () {
                     var val = elem.val();
                     var req = {
                         "EmployeeEmail": val
                     }
-                     
+
                     var ajaxConfiguration = {
                         method: 'POST',
                         url: '/Registration/CheckEmail',
@@ -102,7 +97,7 @@ app.directive('ngCheckemail', ['$http', function (async) {
                                 message = "Email Already Exit"
                             }
                             else {
-                                
+
                             }
                             alert(message)
                         });
@@ -111,9 +106,6 @@ app.directive('ngCheckemail', ['$http', function (async) {
         }
     }
 }]);
- 
-
-
 
 
 
