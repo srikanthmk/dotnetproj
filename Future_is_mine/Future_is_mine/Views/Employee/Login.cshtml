@@ -27,8 +27,11 @@
     <link href="~/css/colors/colors.css" rel="stylesheet" />
     <link href="~/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.10/angular-material.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.7.3/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.10/angular-material.js"></script>
 </head>
 <body data-ng-app="myModule">
 
@@ -301,7 +304,7 @@
             </div>
         </section>
 
-        <section>
+        <section ng-controller="employeeLogin">
             <div class="block remove-bottom">
                 <div class="container">
                     <div class="row">
@@ -509,7 +512,6 @@
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCYc537bQom7ajFpWE5sQaVyz1SQa9_tuY&sensor=true&libraries=places"></script>
     <script src="~/js/maps2.js"></script>
     <script src="~/scripts/Registration/Registration.js"></script>
-    <script src="~/scripts/Login/Login.js"></script>
 </body>
 </html>
 

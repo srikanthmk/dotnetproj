@@ -1,4 +1,4 @@
-﻿var app = angular.module("myModule", ['ngRoute']);
+﻿var app = angular.module("myModule", ['ngRoute','ngMessages']);
  
 
 
@@ -107,6 +107,34 @@ app.directive('ngCheckemail', ['$http', function (async) {
     }
 }]);
 
+app.controller("employeeLogin", function ($scope, $http) {
 
+    $scope.message;
+    $scope.checkLoginDetails = function (formdata) {
+        alert("HI")
+        var email = formdata.email;
+        var password = formdata.password;
+        console.log(email);
+        $http({
+            method: 'POST',
+            url: '/Employee/CheckCredentials',
+            params: {
+                email, password
+            },
+        }).then(function mySuccess(response) {
+            console.log(response.data);
+            if (response.data == "True") {
+                //window.location.href = "/Jobsearch/jobs";
+            }
+            else {
+                $scope.message = 'Invalid Credentials!';
+            }
+
+        }, function myError(response) {
+            $scope.myWelcome = response.statusText;
+        });
+
+    }
+});
 
 
